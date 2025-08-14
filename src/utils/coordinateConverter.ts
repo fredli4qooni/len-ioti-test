@@ -1,5 +1,3 @@
-// src/utils/coordinateConverter.ts
-
 /**
  * @typedef {object} DMSOutput
  * @property {number} deg - Degrees

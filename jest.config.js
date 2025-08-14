@@ -1,4 +1,3 @@
-// jest.config.js
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 export default {
   preset: 'ts-jest',
@@ -22,7 +21,6 @@ export default {
     ],
   },
   moduleNameMapper: {
-    // Mock file CSS agar tidak menyebabkan error saat di-import
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
   },
 };

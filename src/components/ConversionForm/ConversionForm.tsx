@@ -1,16 +1,12 @@
-// src/components/ConversionForm/ConversionForm.tsx
-
 import React, { useState, useEffect } from 'react';
 import { dmsToDd, ddToDms } from '../../utils/coordinateConverter';
 
-// Definisikan tipe untuk props
 interface ConversionFormProps {
   isOpen: boolean;
   onClose: () => void;
   onAddToMap: (coords: { lat: number; lon: number }) => void;
 }
 
-// Tipe untuk tab yang aktif
 type ActiveTab = 'DMS_TO_DD' | 'DD_TO_DMS';
 
 const ConversionForm: React.FC<ConversionFormProps> = ({ isOpen, onClose, onAddToMap }) => {
@@ -26,9 +22,7 @@ const ConversionForm: React.FC<ConversionFormProps> = ({ isOpen, onClose, onAddT
   const [ddLon, setDdLon] = useState('');
   const [dmsResult, setDmsResult] = useState<{ lat: string; lon: string } | null>(null);
 
-  // Efek untuk mereset state saat form ditutup atau tab diganti
   useEffect(() => {
-    // Reset semua state jika form tidak terbuka
     if (!isOpen) {
       setDmsLat({ deg: '', min: '', sec: '', dir: 'N' });
       setDmsLon({ deg: '', min: '', sec: '', dir: 'E' });
@@ -37,7 +31,6 @@ const ConversionForm: React.FC<ConversionFormProps> = ({ isOpen, onClose, onAddT
       setDdLon('');
       setDmsResult(null);
     }
-    // Reset hasil saat tab berganti
     setDdResult(null);
     setDmsResult(null);
   }, [isOpen, activeTab]);
