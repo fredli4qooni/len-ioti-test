@@ -127,7 +127,34 @@ Degrees = floor(DD)
 Minutes = floor((DD - Degrees) * 60)
 Seconds = ((DD - Degrees) * 60 - Minutes) * 60
 ```
+## Instalasi dan Cara Menjalankan Proyek
 
+1.  **Clone repository ini:**
+    ```bash
+    git clone https://github.com/fredli4qooni/len-ioti-test.git
+    ```
+
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd len-ioti-test
+    ```
+
+3.  **Install semua dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Menjalankan aplikasi di mode pengembangan:**
+    Perintah ini akan menjalankan aplikasi di `http://localhost:5173` (atau port lain yang tersedia).
+    ```bash
+    npm run dev
+    ```
+
+5.  **Menjalankan unit tests:**
+    Perintah ini akan menjalankan semua file tes menggunakan Jest.
+    ```bash
+    npm run test
+    ```
 ---
 
 ## 📞 Kontak
